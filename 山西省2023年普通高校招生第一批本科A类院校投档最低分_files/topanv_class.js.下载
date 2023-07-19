@@ -1,0 +1,38 @@
+﻿$(function(){
+	var $anvlfteb=$('#anvlfteb'),
+		$posbox=$anvlfteb.find('div.posbox'),
+		$seledbox=$("#seledbox"),
+		anvjson={
+			fwdh: '<a href="../yjsks/index.html" target="_blank">研究生考试</a>'+				
+                                '<a href="../ptgk/index.html" target="_blank">普通高考</a>'+
+				'<a href="../gkzhgg/index.html" target="_blank">高考综合改革</a>'+
+				'<a href="../crgk/index.html" target="_blank">成人高考</a>'+
+                                '<a href="../zxks/index.html" target="_blank">自学考试</a>'+
+				'<a href="../jszgks/index.html" target="_blank">教师资格考试</a>'+
+				'<a href="../shks/index.html" target="_blank">其它社会考试</a>'+
+				'<a href="../dksxks/index.html" target="_blank">对口升学</a>'+  
+                                '<a href="../zsbks/index.html" target="_blank">专升本考试</a>'+                             
+                                '<a href="../zzks/index.html" target="_blank">中考</a>'+          
+				'<a href="../xyspks/index.html" target="_blank">学业水平考试</a>'+                           				'<a href="../yysljks/index.html" target="_blank">英语四六级考试</a>'+ 
+                                '<a href="../ksfw/index.html" target="_blank">山西省教育考试服务中心</a>'
+
+		};
+		 
+
+		$posbox.mouseover(function(){
+			var i=$(this).index();
+			$(this).addClass("anvh").siblings().removeClass("anvh");
+			var selec=$(this).attr("selec");
+			if($seledbox.is(":hidden")){
+				$seledbox.show().css("left",64*i+1).html("<div>"+anvjson[selec]+"</div>")
+			}else{
+				$seledbox.stop().animate({left:64*i+1},200,function(){
+					$("#seledbox").html("<div>"+anvjson[selec]+"</div>")
+				})
+			}
+		});
+		$anvlfteb.mouseleave(function(){
+			$seledbox.hide();
+			$posbox.removeClass("anvh");
+		})
+})

@@ -1,0 +1,50 @@
+﻿// JavaScript Document
+ 	function nowtime()
+	{
+		var date=new Date;
+		var Year = date.getFullYear();
+		var Month=parseInt(date.getMonth())+1;
+		var Day=date.getDate();
+		var Week=date.getDay();
+		var Hours=parseInt(date.getHours());
+		var Minutes=parseInt(date.getMinutes());
+		var Seconds=parseInt(date.getSeconds());
+		var vk="";
+		var hello="";
+	    switch(Week){
+			case 0:vk="日";break;
+			case 1:vk="一";break;
+			case 2:vk="二";break;
+			case 3:vk="三";break;
+			case 4:vk="四";break;
+			case 5:vk="五";break;
+			case 6:vk="六";break;
+        }
+        this.toDetailDate = function () {
+            //            return " 今天是：" + Year + "年" + Month + "月" + Day + "日 " + "星期" + vk + "  欢迎您访问山西招生考试网站！";
+            return " 今天是：" + Year + "年" + Month + "月" + Day + "日 " + "星期" + vk + " ";
+        };
+        this.toNowDate = function (ele) {
+            var clock = new nowtime();
+            ele.innerText = clock.toDetailDate();
+            window.setTimeout(function () { clock.toNowDate(ele); }, 1000);
+        };	
+		if(Hours<=8){hello="　早上好，欢迎您访问山西招生考试网站！";}
+		if(Hours>8&Hours<12){hello="　上午好，欢迎您访问山西招生考试网站！";}
+		if(Hours>=12&Hours <14){hello="　中午好，欢迎您访问山西招生考试网站！";}
+		if(Hours>=14&Hours<20){hello="　下午好，欢迎您访问山西招生考试网站！";}
+		if(Hours>=20){hello="　晚上好，欢迎您访问山西招生考试网站！";}
+		if(Hours<10){Hours="0"+Hours;}
+		if(Minutes<10){Minutes="0"+Minutes;}
+		if(Seconds<10){Seconds="0"+Seconds;}
+
+		this.toString = function() {
+		    return hello + "　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　当前时间： " + Year + "年" + Month + "月" + Day + "日  " + "星期" + vk + "  " + Hours + "：" + Minutes + "：" + Seconds;
+		};
+		this.toNowDates = function (ele) {
+		    var clock = new nowtime();
+		    ele.innerText = clock.toString();
+		    window.setTimeout(function () { clock.toNowDates(ele); }, 1000);
+		};
+		
+}

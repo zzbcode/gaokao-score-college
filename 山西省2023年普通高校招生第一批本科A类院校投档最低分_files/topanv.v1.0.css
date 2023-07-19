@@ -1,0 +1,16 @@
+#topnanv{height:35px;line-height:35px;font-size:16px;margin:0 auto;}
+#anvlfteb{float:left;height:35px;position:relative;padding:0 1px;}
+.defu a,.posbox a{display:block;padding:0 18px;color:#FFF;text-decoration:none;font-size:14px;font-family:"Microsoft Yahei";}
+.defu a:hover,.posbox a:hover{color:#FFF;text-decoration:none;}
+.defu{background:#111;float:left;}
+
+.posbox a{padding:0 23px 0 13px;width:64px;}
+.posbox i{width:7px;height:4px;background:url(up.gif) 0 -70px no-repeat;position:absolute;top:16px;right:10px;overflow:hidden;}
+#topnanv .anvh a{background:#111;}
+#topnanv .anvh i{background-position:0 -75px;}
+.posiabox{position:absolute;top:32px;left:1px;display:none;padding-top:10px;}
+#seledbox{width:160px;}
+#seledbox div{background:#FFF;box-shadow:0 0 8px #999;border:1px solid #999;font-size:12px;padding:5px 0;overflow:hidden;}
+#seledbox a{background:#FFF;color:#444;text-decoration:none;width:160px;height:10px;display:block;line-height:10px;padding:6px 0 6px 0px;border-bottom:1px dotted #DDD;font-size:14px;}
+#seledbox a:hover{background:#EEE;}
+#seledbox img{float:left;width:20px;height:20px;margin-right:8px;}
